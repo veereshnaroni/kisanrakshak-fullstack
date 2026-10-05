@@ -1,0 +1,6 @@
+{
+  "name": "KisanRakshak Karnataka",
+  "description": "Disaster-Resilient Agriculture: Protecting Farmers Before Natural Disasters in Karnataka with early warnings, risk assessment, and 6-step farm protection plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

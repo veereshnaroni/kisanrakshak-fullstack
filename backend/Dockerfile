@@ -4,6 +4,7 @@ FROM node:22 AS frontend-build
 WORKDIR /frontend
 
 COPY package*.json ./
+
 RUN npm ci --legacy-peer-deps
 
 COPY src ./src
@@ -22,7 +23,7 @@ WORKDIR /app
 COPY backend/pom.xml .
 COPY backend/src ./src
 
-# Put React build inside Spring Boot static resources
+# Put React build into Spring Boot static resources
 COPY --from=frontend-build /frontend/dist ./src/main/resources/static
 
 RUN mvn clean package -DskipTests

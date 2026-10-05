@@ -4,12 +4,10 @@ FROM node:22 AS frontend-build
 WORKDIR /frontend
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 COPY src ./src
 COPY index.html ./
-
-# Copy frontend configuration files if they exist
 COPY *.json ./
 COPY *.ts ./
 
